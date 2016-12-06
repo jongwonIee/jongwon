@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <title>Jongwon.net</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+
+  <!-- Bootstrap -->
+  <link href="css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Main styles -->
+  <link href="css/style.css" rel="stylesheet" />
+  <!--<link rel="stylesheet/less" href="css/style.less" />-->
+  <!-- IE styles -->
+  <link href="css/ie.css" rel="stylesheet" />
+  <!-- Font Awesome -->
+  <link href="css/font-awesome.min.css" rel="stylesheet" />
+  <!-- OWL Carousel -->
+  <link href="css/owl.carousel.css" rel="stylesheet" />
+  <!-- Jquery UI -->
+  <link href="css/jquery-ui.css" rel="stylesheet" />
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
+</head>
+
+<header>
+  <div class="htlfndr-top-header">
+    <div class="navbar navbar-default htlfndr-blue-hover-nav">
+      <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <a class="htlfndr-logo navbar-brand">
+            <img src="images/logo.png" alt="Logo" />
+            <p class="htlfndr-logo-text">Jongwon<span>.net</span></p>
+          </a>
+        </div><!-- .navbar-header -->
+      </div>
+    </div>
+  </div>
+</header>
+
+<body>
+
+<%= yield %>
+
+</body>
+
+
+<!-- Start of the Footer -->
+<footer class="htlfndr-footer">
+  <div class="widget-wrapper">
+    <div class="container">
+      <div class="row">
+        <aside class="col-xs-12 col-sm-6 col-md-3 htlfndr-widget-column">
+          <div class="widget">
+            <a class="htlfndr-logo navbar-brand" href="#">
+              <img src="images/logo.png" height="20" width="30" alt="Logo" />
+              <p class="htlfndr-logo-text">Jongwon<span>.net</span></p>
+            </a>
+            <hr />
+            <p></p>
+            <br />
+            <p></p>
+          </div><!-- .widget -->
+        </aside><!-- .col-xs-12.col-sm-6.col-md-3.htlfndr-widget-column -->
+        <aside class="col-xs-12 col-sm-6 col-md-3 htlfndr-widget-column">
+          <div class="widget">
+            <h3 class="widget-title">contact info</h3>
+            <ul class="menu">
+              <h5>phone number</h5>
+              <p>010-7979-8334</p>
+              <h5>email address</h5>
+              <p>lee.jongwon.dev@gmail.com</p>
+            </ul>
+          </div><!-- .widget -->
+        </aside><!-- .col-xs-12.col-sm-6.col-md-3.htlfndr-widget-column -->
+        <aside class="col-xs-12 col-sm-6 col-md-3 htlfndr-widget-column">
+          <div class="widget">
+            <h3 class="widget-title">frameworks</h3>
+            <ul class="menu">
+              <h5>Web Dev</h5>
+              <p>Ruby On Rails</p>
+              <h5>Game Dev</h5>
+              <p>Unity3D ( C Sharp)</p>
+              <h5>Data Science</h5>
+              <p>Python</p>
+            </ul>
+          </div><!-- .widget -->
+        </aside><!-- .col-xs-12.col-sm-6.col-md-3.htlfndr-widget-column -->
+        <aside class="col-xs-12 col-sm-6 col-md-3 htlfndr-widget-column">
+          <div class="widget">
+            <h3 class="widget-title">SNS</h3>
+            <!-- Start of Follow Us buttons -->
+            <div class="htlfndr-follow-plugin">
+              <a href="https://ko-kr.facebook.com/people/%EC%9D%B4%EC%A2%85%EC%9B%90/100004241766823" target="_blank" class="htlfndr-follow-button button-facebook"></a>
+              <a href="#" class="htlfndr-follow-button button-twitter"></a>
+              <a href="#" class="htlfndr-follow-button button-google-plus"></a>
+              <a href="#" class="htlfndr-follow-button button-linkedin"></a>
+              <a href="#" class="htlfndr-follow-button button-pinterest"></a>
+              <a href="https://www.youtube.com/channel/UC76dJBq-3xV4KplzprJDs1Q" target="_blank" class="htlfndr-follow-button button-youtube"></a>
+            </div><!-- .htlfndr-follow-plugin -->
+            <!-- End of Follow Us buttons -->
+            <hr />
+
+          </div><!-- .widget -->
+        </aside><!-- .col-xs-12.col-sm-6.col-md-3.htlfndr-widget-column -->
+      </div><!-- .row -->
+    </div><!-- .container -->
+  </div><!-- .widget-wrapper -->
+
+  <div class="htlfndr-copyright">
+    <div class="container" role="contentinfo">
+      <p>Copyright 2016 | All Rights Reserved</p>
+    </div><!-- .container -->
+  </div><!-- .htlfndr-copyright -->
+</footer>
+
+</html>
