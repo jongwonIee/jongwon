@@ -17172,3 +17172,10 @@ Processing by HomeController#index as HTML
 Completed 200 OK in 31ms (Views: 29.4ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for ::1 at 2019-09-13 00:10:44 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (2552.1ms)
+Completed 200 OK in 2670ms (Views: 2660.6ms | ActiveRecord: 0.0ms)
+
+
