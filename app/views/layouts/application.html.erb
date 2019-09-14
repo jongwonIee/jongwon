@@ -1,15 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="icon"
-        type="image/png"
-        href="images/logo.png">
-
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
   <title> <%= yield(:page_title) %> | Jongwon.net</title>
+
+
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
@@ -38,13 +37,18 @@
 </head>
 
 <header>
+
+  <link rel="icon"
+        type="image/png"
+        href="images/logo.png">
+
   <div class="htlfndr-top-header">
     <div class="navbar navbar-default htlfndr-blue-hover-nav">
       <div class="container">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
-          <a class="htlfndr-logo navbar-brand">
-            <img src="images/logo.png" alt="Logo" />
+          <a href="/" class="htlfndr-logo navbar-brand">
+            <img src="images/logo.png" alt="Logo"/>
             <p class="htlfndr-logo-text">Jongwon<span>.net</span></p>
           </a>
         </div><!-- .navbar-header -->
@@ -53,12 +57,11 @@
   </div>
 </header>
 
-<body>
-
-<%= yield %>
-
-</body>
-
+<div class="container <%= controller_name %> <%= action_name %>">
+  <body>
+    <%= yield %>
+  </body>
+</div>
 
 <!-- Start of the Footer -->
 <footer class="htlfndr-footer">
