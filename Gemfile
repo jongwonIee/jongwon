@@ -1,7 +1,5 @@
 source 'https://rubygems.org'
 
-ruby "2.4.0"
-
 gem 'friendly_id', '~> 5.2.4' # Note: You MUST use 5.0.0 or greater for Rails 4.0+
 
 gem 'bootstrap', '4.0.0.alpha3'
