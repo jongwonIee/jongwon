@@ -9,7 +9,7 @@ gem 'bootstrap', '4.0.0.alpha3'
 gem 'rails', '~> 5.0.0', '>= 5.0.0.1'
 # Use sqlite3 as the database for Active Record
 gem 'rails_12factor', group: :production
-gem 'sqlite3', group: :development
+# gem 'sqlite3', group: :development
 gem 'pg', group: :production
 
 # Use Puma as the app server
