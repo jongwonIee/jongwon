@@ -8,7 +8,6 @@
 
   <title> <%= yield(:page_title) %> | Jongwon.net</title>
 
-
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
@@ -51,10 +50,19 @@
             <img src="images/logo.png" alt="Logo"/>
             <p class="htlfndr-logo-text">Jongwon<span>.net</span></p>
           </a>
-          <a href="/posts" class="htlfndr-logo navbar-brand">
-            <!--<p class="htlfndr-logo-text">blog</p>-->
+
+          <!-- cv -->
+          <%#= link_to 'Download CV', 'cv.pdf', download: 'cv', class: 'htlfndr-logo navbar-brand' %>
+
+          <a href="/cv.pdf" class="htlfndr-logo navbar-brand">
+            <p class="htlfndr-logo-text">Download CV</p>
           </a>
-          <%= link_to 'Download CV', 'cv.pdf', download: 'cv', class: 'navbar-brand' %>
+
+          <!-- blog -->
+          <a href="/posts" class="htlfndr-logo navbar-brand">
+            <p class="htlfndr-logo-text">blog</p>
+          </a>
+
         </div><!-- .navbar-header -->
       </div>
     </div>
