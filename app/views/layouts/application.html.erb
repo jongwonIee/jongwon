@@ -8,8 +8,13 @@
 
   <title> <%= yield(:page_title) %> | Jongwon.net</title>
 
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag    'application', media: 'all'  %>
+  <%= javascript_include_tag 'application'  %>
+
+  <%= stylesheet_link_tag "scaffolds" %>
+  <%= stylesheet_link_tag "depot", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+
   <%= csrf_meta_tags %>
 
   <!-- Bootstrap -->
@@ -37,9 +42,9 @@
 
 <header>
 
-  <link rel="icon"
-        type="image/png"
-        href="images/logo.png">
+<!--  <link rel="icon"-->
+<!--        type="image/png"-->
+<!--        href="images/logo.png">-->
 
   <div class="htlfndr-top-header">
     <div class="navbar navbar-default htlfndr-blue-hover-nav">
@@ -47,7 +52,7 @@
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
           <a href="/" class="htlfndr-logo navbar-brand">
-            <img src="images/logo.png" alt="Logo"/>
+<!--            <img src="images/logo.png" alt="Logo"/>-->
             <p class="htlfndr-logo-text">Jongwon<span>.net</span></p>
           </a>
 
@@ -75,6 +80,9 @@
   </body>
 </div>
 
+</html>
+
+<% if controller_name == "home" %>
 <!-- Start of the Footer -->
 <footer class="htlfndr-footer">
   <div class="widget-wrapper">
@@ -145,7 +153,7 @@
           <div class="widget">
             <h3 class="widget-title">CV</h3>
             <ul class="menu">
-                <%= link_to 'Download as PDF', 'cv.pdf', download: 'cv' %>
+              <%= link_to 'Download as PDF', 'cv.pdf', download: 'cv' %>
             </ul>
             <hr />
 
@@ -162,5 +170,4 @@
     </div><!-- .container -->
   </div><!-- .htlfndr-copyright -->
 </footer>
-
-</html>
+<% end %>
