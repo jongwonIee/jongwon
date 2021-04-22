@@ -1,35 +1,60 @@
 <% provide(:page_title, 'All Posts') %>
 
-<p id="notice"><%= notice %></p>
+<div class="htlfndr-wrapper">
+  <main role="main">
+    <section class="container-fluid htlfndr-categories-portfolio">
+      <!-- category1 -->
+      <h2 class="htlfndr-section-title bigger-title">Web Development</h2>
+      <!-- category1 -->
+      <div class="htlfndr-section-under-title-line"></div>
+      <div class="container">
+        <div class="row">
 
-<h1>Posts</h1>
+          <% @posts.each do |post| %>
+          <div class="col-sm-4 col-xs-6">
+            <div class="htlfndr-category-box" onclick="void(0)">
+              <%= image_tag 'tost.png', style: 'height:310px' %>
+              <div class="category-description">
+                <h2 class="subcategory-name"><%= post.title %></h2>
+                  <%= link_to '', post, class:'htlfndr-category-permalink'%></h4>
+                    <br><br>
+                    <h4 class="category-name"><%= post.title %></h4>
+              </div><!-- .category-description -->
+            </div><!-- .htlfndr-category-box -->
+          </div><!-- .col-sm-4.col-xs-6 -->
+          <% end %>
 
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Body</th>
-      <th>Description</th>
-      <th>Slug</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+        </div><!-- .row -->
+      </div><!-- .container -->
+    </section><!-- .container-fluid.htlfndr-visitors-cards -->
+  </main>
+</div><!-- .htlfndr-wrapper -->
 
-  <tbody>
-    <% @posts.each do |post| %>
-      <tr>
-        <td><%= post.title %></td>
-        <td><%= post.body %></td>
-        <td><%= post.description %></td>
-        <td><%= post.slug %></td>
-        <td><%= link_to 'Show', post %></td>
-        <td><%= link_to 'Edit', edit_post_path(post) %></td>
-        <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<h1>List of Articles</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>Title</th>
+          <th>Body</th>
+          <th>Description</th>
+          <th>Slug</th>
+          <th colspan="3"></th>
+        </tr>
+      </thead>
 
-<br>
+      <tbody>
+        <% @posts.each do |post| %>
+          <tr>
+            <td><%= post.title %></td>
+            <td><%= post.body %></td>
+            <td><%= post.category %></td>
+            <td><%= post.slug %></td>
+            <td><%= link_to 'Show', post %></td>
+            <td><%= link_to 'Edit', edit_post_path(post) %></td>
+            <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
 
 <%= link_to 'New Post', new_post_path %>
