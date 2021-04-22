@@ -29,8 +29,8 @@ ActiveRecord::Schema.define(version: 20190913041550) do
     t.text     "body"
     t.text     "category"
     t.string   "slug"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.index ["slug"], name: "index_posts_on_slug", unique: true
   end
 
