@@ -3,7 +3,7 @@ require_relative 'boot'
 require 'rails/all'
 
 #heroku
-config.serve_static_files = true
+# config.serve_static_files = true
 
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
