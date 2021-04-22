@@ -13,7 +13,7 @@
           <% @posts.each do |post| %>
           <div class="col-sm-4 col-xs-6">
             <div class="htlfndr-category-box" onclick="void(0)">
-              <img src="/assets/img<%=post.id %>.png" style= 'height:310px' />
+              <img src="/assets/img<%= Post.ids.find_index(post.id) + 1 %>.png" style= 'height:310px' />
               <div class="category-description">
                 <h2 class="subcategory-name"><%= post.title %></h2>
                     <%= link_to '', post, class:'htlfndr-category-permalink'%>
