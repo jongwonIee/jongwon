@@ -7,28 +7,23 @@
   <div class="leftcolumn">
     <div class="card" >
       <h2 class="htlfndr-section-title bigger-title"><%= @post.title %></h2>
-      <h5>by. Jongwon Lee | <%= @post.date %></h5>
+      <h5 class="widget-title">by. Jongwon Lee | <%= @post.date %></h5>
 
-      <h4 class="widget-title"><%= @post.category %></h4>
+      <h5 class="widget-title"><%= @post.category %></h5>
       <img src="/assets/img<%= Post.ids.find_index(@post.id) + 1 %>.png", style="height:200px;">
       <h4 class="subcategory-name"><%= @post.body %></h4>
 
-      <p><%= link_to 'Edit', edit_post_path(@post) %> | <%= link_to 'Back', posts_path %></p>
+      <p><%= link_to 'Edit', edit_post_path(@post) %> | <%= link_to 'Back', posts_path %> | <%= link_to 'Destroy', @post, method: :delete, data: { confirm: 'Are you sure?' } %></p>
     </div>
   </div>
   <!-- other articles -->
-  <div class="rightcolumn">
-    <div class="card">
-      <h2> <%= @sample_posts[0].title %> </h2>
-      <h2> <%= @sample_posts[0].body[0...100] %> </h2>
+  <% @sample_posts.sample(3).each do |post| %>
+    <div class="rightcolumn">
+      <div class="card">
+        <h4 class="htlfndr-section-title"> <%= post.title %> </h4>
+        <h5 class="widget-title"> <%= post.body[0...100] %> </h5>
+      </div>
     </div>
-    <div class="card">
-      <h2> <%= @sample_posts[1].title %> </h2>
-      <h2> <%= @sample_posts[0].body[0...100] %> </h2>
-    </div>
-    <div class="card">
-      <h2> <%= @sample_posts[2].title %> </h2>
-      <h2> <%= @sample_posts[0].body[0...100] %> </h2>
-    </div>
-  </div>
+  <% end %>
+
 </div>
