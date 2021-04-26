@@ -15,7 +15,7 @@
                 <div class="htlfndr-category-box" onclick="void(0)">
                   <img src="/assets/img<%= Post.ids.find_index(post.id) + 1 %>.png" style= 'height:310px' />
                   <div class="category-description">
-                    <h2 class="subcategory-name"><%= post.title[0...20] %></h2>
+                    <h3 class="subcategory-name"><%= post.title[0...20] %></h3>
                         <%= link_to '', post, class:'htlfndr-category-permalink'%> <!--link to show with a button-->
                         <br><br>
                         <h4 class="category-name"><%= post.title %></h4>
