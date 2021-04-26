@@ -25,6 +25,10 @@ class PostsController < ApplicationController
   def edit
   end
 
+  def admin
+    @posts = Post.all
+  end
+
   # POST /posts
   # POST /posts.json
   def create

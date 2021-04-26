@@ -1,0 +1,15 @@
+<% provide(:page_title, 'admin') %>
+
+<div class="htlfndr-wrapper">
+  <main role="main">
+      <div class="container">
+        <div class="row">
+          <% @posts.each do |post| %>
+              <%= post.title %></h4>
+              <%= link_to 'Edit', edit_post_path(post) %> | <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+          <% end %>
+        </div><!-- .row -->
+      </div><!-- .container -->
+    </section><!-- .container-fluid.htlfndr-visitors-cards -->
+  </main>
+</div><!-- .htlfndr-wrapper -->
