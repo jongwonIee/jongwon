@@ -2,23 +2,27 @@
 <!--w3sc-->
 <div class="row">
   <div class="leftcolumn">
-    <div class="card" >
-      <h2 class="htlfndr-section-title bigger-title"><%= @post.title %></h2>
-      <h5 class="widget-title">by. Jongwon Lee | <%= @post.date %> | <%= @post.impressionist_count %> Views</h5>
-
-      <h5 class="widget-title"><%= @post.category %></h5>
-      <img src="/assets/img<%= Post.ids.find_index(@post.id) + 1 %>.png", style="height:200px;">
-      <h4 class="subcategory-name"><%= @post.body %></h4>
-
+    <div class="card">
+      <div>
+        <h2><%= @post.title %></h2>
+        <br>
+      </div>
+      <div>
+        <h5><%= @post.category %></h5>
+        <h5>by. Jongwon Lee | <%= @post.date %> | <%= @post.impressionist_count %> Views</h5>
+      </div>
+      <div>
+        <img src="/assets/img<%= Post.ids.find_index(@post.id) + 1 %>.png", style="height:200px;">
+        <h4><%= @post.body %></h4>
+      </div>
     </div>
   </div>
   <!-- other articles -->
   <% @sample_posts.sample(3).each do |post| %>
     <div class="rightcolumn">
       <div class="card">
-        <h4 class="htlfndr-section-title"> <%= post.title %> </h4>
+        <h4> <%= post.title %> </h4>
       </div>
     </div>
   <% end %>
-
 </div>
