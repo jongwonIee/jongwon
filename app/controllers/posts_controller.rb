@@ -14,6 +14,8 @@ class PostsController < ApplicationController
     #other 3 articles
     @sample_posts = Post.find(Post.pluck(:id))
     @sample_posts.delete_if{|x| x.id == @post.id}
+    #impressionist
+    impressionist(@post)
   end
 
   # GET /posts/new

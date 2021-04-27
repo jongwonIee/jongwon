@@ -67,8 +67,8 @@ GEM
       activesupport (>= 4.2.0)
     i18n (1.8.10)
       concurrent-ruby (~> 1.0)
-    jbuilder (2.11.2)
-      activesupport (>= 5.0.0)
+    impressionist (1.6.1)
+      nokogiri (~> 1)
     jquery-rails (4.4.0)
       rails-dom-testing (>= 1, < 3)
       railties (>= 4.2.0)
@@ -178,7 +178,7 @@ DEPENDENCIES
   coffee-rails (~> 4.2)
   font-awesome-rails
   friendly_id (~> 5.2.4)
-  jbuilder (~> 2.5)
+  impressionist (~> 1.6.1)
   jquery-rails
   listen (~> 3.0.5)
   pg

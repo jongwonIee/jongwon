@@ -4,7 +4,7 @@
   <div class="leftcolumn">
     <div class="card" >
       <h2 class="htlfndr-section-title bigger-title"><%= @post.title %></h2>
-      <h5 class="widget-title">by. Jongwon Lee | <%= @post.date %></h5>
+      <h5 class="widget-title">by. Jongwon Lee | <%= @post.date %> | <%= @post.impressionist_count %> Views</h5>
 
       <h5 class="widget-title"><%= @post.category %></h5>
       <img src="/assets/img<%= Post.ids.find_index(@post.id) + 1 %>.png", style="height:200px;">
@@ -17,7 +17,6 @@
     <div class="rightcolumn">
       <div class="card">
         <h4 class="htlfndr-section-title"> <%= post.title %> </h4>
-        <h5 class="widget-title"> <%= post.body[0...100] %> </h5>
       </div>
     </div>
   <% end %>
