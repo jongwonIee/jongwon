@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'stats' => 'stats#index'
+
   resources :posts
   root 'home#index'
 
