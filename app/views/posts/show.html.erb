@@ -9,7 +9,7 @@
       </div>
       <div>
         <h5><%= @post.category %></h5>
-        <h5>by. Jongwon Lee | <%= @post.date %> | <%= @post.impressionist_count %> Views</h5>
+        <h5>by. Jongwon Lee | <%= @post.date %> | <%= @post.impressionist_count %> Views | <%= @post.impressionist_count(:filter=>:ip_address) %> Uniq Views </h5>
       </div>
       <div>
         <img src="/assets/img<%= Post.ids.find_index(@post.id) + 1 %>.png", style="height:200px;">
