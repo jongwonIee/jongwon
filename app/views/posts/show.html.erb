@@ -21,7 +21,8 @@
   <% @sample_posts.sample(3).each do |post| %>
     <div class="rightcolumn">
       <div class="card">
-        <h4> <%= post.title %> </h4>
+        <h4> <%= link_to post.title, post %> </h4>
+        <img src="/assets/img<%= Post.ids.find_index(post.id) + 1 %>.png", style="height:100px;">
       </div>
     </div>
   <% end %>
