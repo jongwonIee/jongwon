@@ -4,6 +4,7 @@ class CreatePosts < ActiveRecord::Migration[5.0]
       t.string :title
       t.string :date
       t.text :body
+      t.text :body2
       t.text :category
       t.string :slug
 
