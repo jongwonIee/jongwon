@@ -12,10 +12,10 @@
         <h5>by. Jongwon Lee | <%= @post.date %> | <%= @post.impressionist_count %> Views | <%= @post.impressionist_count(:filter=>:ip_address) %> Uniq Views </h5>
       </div>
       <div>
-        <img src="/assets/img<%= Post.ids.find_index(@post.id) + 1 %>.png", style="height:200px;">
+        <img src="/assets/img<%= Post.order(:id).ids.find_index(@post.id) + 1 %>.png", style="height:200px;">
         <h4><%= @post.body %></h4>
         <% if @post.body2.present? %>
-        <img src="/assets/img<%= Post.ids.find_index(@post.id) + 1 %>-2.png", style="height:200px;">
+        <img src="/assets/img<%= Post.order(:id).find_index(@post.id) + 1 %>-2.png", style="height:200px;">
         <h4><%= @post.body2 %></h4>
         <% end %>
       </div>
