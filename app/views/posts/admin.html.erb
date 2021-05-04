@@ -4,7 +4,7 @@
   <main role="main">
       <div class="container">
         <div class="row">
-          <% @posts.each do |post| %>
+          <% @posts.order(:id).each do |post| %>
               <%= post.title %></h4>
               <%= link_to 'Edit', edit_post_path(post) %> | <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></p>
           <% end %>

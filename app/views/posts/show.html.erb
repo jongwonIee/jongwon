@@ -14,7 +14,7 @@
       <div>
         <img src="/assets/img<%= Post.ids.find_index(@post.id) + 1 %>.png", style="height:200px;">
         <h4><%= @post.body %></h4>
-        <% if @post.body2 %>
+        <% if @post.body2.present? %>
         <img src="/assets/img<%= Post.ids.find_index(@post.id) + 1 %>-2.png", style="height:200px;">
         <h4><%= @post.body2 %></h4>
         <% end %>

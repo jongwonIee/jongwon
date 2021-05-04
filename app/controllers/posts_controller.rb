@@ -5,7 +5,7 @@ class PostsController < ApplicationController
   # GET /posts
   # GET /posts.json
   def index
-    @posts = Post.all.order(:id)
+    @posts = Post.all
   end
 
   # GET /posts/1
@@ -28,7 +28,7 @@ class PostsController < ApplicationController
   end
 
   def admin
-    @posts = Post.all.order(:id)
+    @posts = Post.all
   end
 
   # POST /posts
